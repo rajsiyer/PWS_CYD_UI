@@ -1,0 +1,12 @@
+<screen>
+	<view extends="lv_obj">
+		<!-- Add your code here -->
+		<button name="btn_Man_Home" x="24" y="204" text="Home" text_color="0xfcfcfc" bg_color="0x067003">
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+		<button name="btn_Man_Setting" x="211" y="198" text="Settings" text_color="0xffffff">
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Settings" />
+		</button>
+		<h2 name="h2_1" x="82" y="84" text="Manual" />
+	</view>
+</screen>

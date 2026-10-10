@@ -1,0 +1,20 @@
+<screen>
+	<view extends="lv_obj">
+		<!-- Add your code here -->
+		<button
+			name="btn_Settings_Home"
+			x="10"
+			y="203"
+			bg_color="0x186804"
+			text="Home"
+			text_color="0xffffff"
+			icon="icon_chevron_left"
+		>
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+		<button name="btn_Settings_Manual" x="218" y="201" text_color="0xffffff" bg_color="0xdd0303" text="Manual">
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Manual" />
+		</button>
+		<h2 name="h2_1" x="69" y="81" text="SETTINGS" />
+	</view>
+</screen>

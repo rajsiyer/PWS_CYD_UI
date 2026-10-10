@@ -1,0 +1,102 @@
+<screen>
+	<view extends="lv_obj" style_bg_color="0x2c0f01" style_bg_opa="100%">
+		
+		<!-- Add your code here -->
+		<button name="butnHome" x="5" y="201" bg_color="0x8a0e05" text="Home" radius="10">
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />			
+		</button>
+
+		<text name="Dry1" x="15" y="65" style_text_color="0xf48c59" bind_text="sjt_p1Dry" bind_text-fmt="%d" />
+
+		<text name="Dry2" x="15" y="95" style_text_color="0xf48c59" bind_text="sjt_p2Dry" bind_text-fmt="%d" />
+
+		<text name="Dry3" x="15" y="125" style_text_color="0xf48c59" bind_text="sjt_p3Dry" bind_text-fmt="%d" />
+
+		<text name="Dry4" x="15" y="155" style_text_color="0xf48c59" bind_text="sjt_p4Dry" bind_text-fmt="%d" />
+
+		<text name="R1" x="120" y="65" style_text_color="0x86fa7e" bind_text="subject_raw1" bind_text-fmt="%d" />
+
+		<text name="R2" x="120" y="95" style_text_color="0x86fa7e" bind_text="subject_raw2" bind_text-fmt="%d" />
+
+		<text name="R3" x="120" y="125" style_text_color="0x86fa7e" bind_text="subject_raw3" bind_text-fmt="%d" />
+
+		<text name="R4" x="120" y="155" style_text_color="0x86fa7e" bind_text="subject_raw4" bind_text-fmt="%d" />
+
+		<text name="Wet1" x="215" y="65" style_text_color="0x6e67f3" bind_text="sjt_p1Wet" bind_text-fmt="%d" />
+
+		<text name="Wet2" x="215" y="95" style_text_color="0x6e67f3" bind_text="sjt_p2Wet" bind_text-fmt="%d" />
+
+		<text name="Wet3" x="215" y="125" style_text_color="0x6e67f3" bind_text="sjt_p3Wet" bind_text-fmt="%d" />
+
+		<text name="Wet4" x="215" y="155" style_text_color="0x6e67f3" bind_text="sjt_p4Wet" bind_text-fmt="%d" />
+
+		<text
+			name="Moist1"
+			x="278"
+			y="65"
+			style_text_color="0x86fa7e"
+			bind_text="subject_moisture1"
+			bind_text-fmt="%d"
+			width="11"
+			height="17"
+		/>
+
+		<text
+			name="Moist2"
+			y="95"
+			style_text_color="0x86fa7e"
+			bind_text="subject_moisture2"
+			bind_text-fmt="%d"
+			x="278"
+		/>
+
+		<text
+			name="Moist3"
+			y="125"
+			style_text_color="0x86fa7e"
+			bind_text="subject_moisture3"
+			bind_text-fmt="%d"
+			x="278"
+		/>
+
+		<text
+			name="Moist4"
+			y="155"
+			style_text_color="0x86fa7e"
+			bind_text="subject_moisture4"
+			bind_text-fmt="%d"
+			x="278"
+		/>
+		<h5 name="h5_1" text="Sensor Calibration" style_text_color="0xfff887" width="200" height="20" x="70" y="6" />
+
+		<text name="text_1" x="240" style_text_color="0x86fa7e" text="% Moist" y="38" />
+		<text name="text_2" style_text_color="0x86fa7e" x="105" text="Raw" y="38" />
+		
+		<button name="bD_1" height="25" x="76" y="59" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" />		
+		
+		<button name="bD_2" height="25" x="75" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" y="90" />		
+			
+		<button name="bD_3" height="25" x="75" y="120" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" />
+		
+		<button name="bD_4" height="25" x="75" y="150" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left"/>
+		<event_cb trigger="clicked" callback="eP4_Dry" />
+		
+		<button	name="bW_1"	height="25" x="170" y="60" bg_color="0x06218a"
+		text="" width="38" icon="icon_arrow_right"/>
+		
+		<button name="bW_2" height="25" x="170" y="90" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right" />
+		
+		<button name="bW_3" height="25" x="170" y="120" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right" />		
+		
+		<button
+			name="bW_4"
+			height="25"
+			x="170"
+			y="150"
+			bg_color="0x06218a"
+			text=""
+			width="38"
+			icon="icon_arrow_right"
+		/>
+	</view>
+</screen>
