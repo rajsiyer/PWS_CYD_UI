@@ -1,0 +1,83 @@
+<screen>
+	<view extends="lv_obj" style_bg_color="0x051d22" style_bg_opa="100%">
+		<!-- Add your code here -->
+		<text name="text_1" x="78" y="7" style_text_color="0xfff887" text="SYSTEM SETTINGS" />
+		<text
+			name="text_2"
+			x="8"
+			y="48"
+			text="Max Tank Depth (cms)"
+			style_text_color="0xfff887"
+			width="192"
+			height="20"
+		/>
+		<int_spinner subject="sjt_tankHt" x="204" y="43" />
+		<text
+			name="text_3"
+			x="9"
+			y="107"
+			text="Check Interval (Mins)"
+			style_text_color="0xfff887"
+			width="192"
+			height="20"
+		/>
+		<text
+			name="text_5"
+			x="10"
+			y="78"
+			text="Min.Tank Level (in %)"
+			style_text_color="0xfff887"
+			width="192"
+			height="20"
+		/>
+		<int_spinner subject="sjt_monIntrvl" x="204" y="101" />
+		<int_spinner subject="sjt_minTnkLvl" x="204" y="72" />
+		<text
+			name="text_4"
+			x="8"
+			y="138"
+			text="Screen Timeout (secs.)"
+			style_text_color="0xfff887"
+			width="180"
+			height="20"
+		/>
+		<int_spinner subject="sjt_scrnTimeOut" x="204" y="130" />
+		<button
+			name="btn_Save"
+			x="221"
+			y="170"
+			bg_color="0x444241"
+			text="SAVE"
+			text_color="0xffffff"
+			icon="icon_settings"
+			width="88"
+			height="26"
+			radius="5"
+		>
+			<event_cb trigger="clicked" callback="eSettings_Save" />
+		</button>
+		<button
+			name="btn_Home1"
+			x="8"
+			y="203"
+			radius="5"
+			bg_color="0x186804"
+			text="Home"
+			text_color="0xffffff"
+			icon="icon_chevron_left"
+		>
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+		<button
+			name="btn_Set1"
+			x="200"
+			y="203"
+			bg_color="0x020cd1"
+			text="Settings"
+			text_color="0xffffff"
+			icon="icon_chevron_left"
+		>
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set1" />
+		</button>
+	</view>
+</screen>

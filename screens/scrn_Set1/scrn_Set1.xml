@@ -1,0 +1,70 @@
+<screen>
+	<view extends="lv_obj" style_bg_color="0x051d22" style_bg_opa="100%">
+		<!-- Add your code here -->
+		<int_spinner subject="sjt_mstThd_1" x="60" y="50" />
+		<int_spinner subject="sjt_mstThd_2" x="60" y="80" />
+		<int_spinner subject="sjt_mstThd_3" x="60" y="110" />
+		<int_spinner subject="sjt_mstThd_4" x="60" y="140" />
+		<int_spinner subject="sjt_pmpTms_1" x="190" y="50" />
+		<int_spinner subject="sjt_pmpTms_2" x="190" y="80" />
+		<int_spinner subject="sjt_pmpTms_3" x="190" y="110" />
+		<int_spinner subject="sjt_pmpTms_4" x="190" y="140" />
+		<text
+			name="text_1"
+			x="16"
+			y="8"
+			style_text_color="0xfff887"
+			text="MOISTURE &amp; PUMPING TIME"
+			width="293"
+			height="16"
+		/>
+		<button
+			name="btn_Settings_Home"
+			x="10"
+			y="206"
+			bg_color="0x186804"
+			text="Home"
+			text_color="0xffffff"
+			icon="icon_chevron_left"
+			width="88"
+			height="26"
+			radius="5"
+		>
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+		<text name="text_2" x="8" y="55" width="40" text="P-1" style_text_color="0xfff887" />
+		<text name="text_3" x="8" y="85" width="40" text="P-2" style_text_color="0xfff887" />
+		<text name="text_4" x="8" y="115" width="40" text="P-3" style_text_color="0xfff887" />
+		<text name="text_5" x="8" y="145" width="40" text="P-4" style_text_color="0xfff887" />
+		<text name="text_6" x="65" y="33" width="105" text="Dry Level (%)" style_text_color="0xfff887" />
+		<text name="text_7" y="33" width="125" text="Pumping (sec)" x="190" style_text_color="0xfff887" />
+		<button
+			name="btn_Save"
+			x="127"
+			y="180"
+			bg_color="0x444241"
+			text="SAVE"
+			text_color="0xffffff"
+			icon="icon_settings"
+			width="88"
+			height="26"
+			radius="5"
+		>
+			<event_cb trigger="clicked" callback="eSettings_Save" />
+		</button>
+		<button
+			name="btn_Settings2"
+			x="226"
+			y="206"
+			bg_color="0x673003"
+			text="MORE "
+			text_color="0xffffff"
+			icon="icon_arrow_right"
+			width="88"
+			height="26"
+			radius="5"
+		>
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set2" />
+		</button>
+	</view>
+</screen>

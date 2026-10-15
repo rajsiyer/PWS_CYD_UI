@@ -6,6 +6,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/button/button_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/checkbox/checkbox_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/dropdown/dropdown_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/controls/int_spinner/int_spinner_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/keyboard/keyboard_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/slider/slider_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/controls/switch/switch_gen.c
@@ -86,4 +87,5 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Calib/scrn_Calib_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Home/scrn_Home_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Manual/scrn_Manual_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Settings/scrn_Settings_gen.c)
+  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Set1/scrn_Set1_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Set2/scrn_Set2_gen.c)

@@ -126,24 +126,103 @@
 			help="Example value (0..100) driven by the demo controls"
 		/>
 		<int name="subject_show_keyboard" value="0" help="Wether to show a keyboard " />
-		
+
 		<!--  Application variables  -->
-		<int name="subject_raw1" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-0"/>
-		<int name="subject_raw2" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-1"/>
-		<int name="subject_raw3" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-2"/>
-		<int name="subject_raw4" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-3"/>
-		<int name="sjt_p1Dry" value="0" min_value="0" max_value="17400" help="Dry Cal Vount for sensor at ADC-0"/>
-		<int name="sjt_p2Dry" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-1"/>
-		<int name="sjt_p3Dry" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-2"/>
-		<int name="sjt_p4Dry" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-3"/>
-		<int name="sjt_p1Wet" value="0" min_value="0" max_value="17400" help="Dry Cal Vount for sensor at ADC-0"/>
-		<int name="sjt_p2Wet" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-1"/>
-		<int name="sjt_p3Wet" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-2"/>
-		<int name="sjt_p4Wet" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-3"/>
-		<int name="subject_moisture1" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-0"/>
-		<int name="subject_moisture2" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-1"/>
-		<int name="subject_moisture3" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-2"/>
-		<int name="subject_moisture4" value="0" min_value="0" max_value="17400" help="Raw Counts from sensor at ADC-3"/>
+		<int name="subject_raw1" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-0" />
+		<int name="subject_raw2" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-1" />
+		<int name="subject_raw3" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-2" />
+		<int name="subject_raw4" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-3" />
+		<int name="sjt_p1Dry" value="0" min_value="0" max_value="32767" help="Dry Cal Vount for sensor at ADC-0" />
+		<int name="sjt_p2Dry" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-1" />
+		<int name="sjt_p3Dry" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-2" />
+		<int name="sjt_p4Dry" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-3" />
+		<int name="sjt_p1Wet" value="0" min_value="0" max_value="32767" help="Dry Cal Vount for sensor at ADC-0" />
+		<int name="sjt_p2Wet" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-1" />
+		<int name="sjt_p3Wet" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-2" />
+		<int name="sjt_p4Wet" value="0" min_value="0" max_value="32767" help="Raw Counts from sensor at ADC-3" />
+		<int
+			name="subject_moisture1"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture % reading by sensor at ADC-0"
+		/>
+		<int name="subject_moisture2" value="0" min_value="0" max_value="100" help="Moisture % reading by at ADC-1" />
+		<int
+			name="subject_moisture3"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture % reading by sensor at ADC-2"
+		/>
+		<int
+			name="subject_moisture4"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture % reading by sensor at ADC-3"
+		/>
+		<int name="sjt_Pump1" value="0" min_value="0" max_value="1" help="Status Pump-1" />
+		<int
+			name="sjt_mstThd_1"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture min% threshold for watering by Pump-1"
+		/>
+		<int
+			name="sjt_mstThd_2"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture min% threshold for watering by Pump-2"
+		/>
+		<int
+			name="sjt_mstThd_3"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture min% threshold for watering by Pump-3"
+		/>
+		<int
+			name="sjt_mstThd_4"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Moisture min% threshold for watering by Pump-4"
+		/>
+		<int
+			name="sjt_pmpTms_1"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Pumping duration in secs for watering using Pump-1"
+		/>
+		<int
+			name="sjt_pmpTms_2"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Pumping duration in secs for watering using Pump-2"
+		/>
+		<int
+			name="sjt_pmpTms_3"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Pumping duration in secs for watering using Pump-3"
+		/>
+		<int
+			name="sjt_pmpTms_4"
+			value="0"
+			min_value="0"
+			max_value="100"
+			help="Pumping duration in secs for watering using Pump-4"
+		/>
+		<int name="sjt_tankHt" value="0" min_value="10" max_value="900" help="Height of storage tank in Cms" />
+		<int name="sjt_monIntrvl" value="120" min_value="1" max_value="1440" help="Monitoring Interval in Minutes" />
+		<int name="sjt_scrnTimeOut" value="15" help="Active screen time after touch" />
+		<int name="sjt_minTnkLvl" value="30" min_value="1" max_value="100" help="Minimum water Level in tank" />
 	</subjects>
 
 	<images>
@@ -537,5 +616,7 @@
 			bg_opa="80%"
 			pad_all="#space_sm"
 		/>
+		<style name="style_pump_on" bg_color="0x22ae05" />
+		<style name="style_pump_off" bg_color="0xb70303" />
 	</styles>
 </globals>

@@ -1,9 +1,8 @@
 <screen>
 	<view extends="lv_obj" style_bg_color="0x2c0f01" style_bg_opa="100%">
-		
 		<!-- Add your code here -->
 		<button name="butnHome" x="5" y="201" bg_color="0x8a0e05" text="Home" radius="10">
-			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />			
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
 		</button>
 
 		<text name="Dry1" x="15" y="65" style_text_color="0xf48c59" bind_text="sjt_p1Dry" bind_text-fmt="%d" />
@@ -71,32 +70,38 @@
 
 		<text name="text_1" x="240" style_text_color="0x86fa7e" text="% Moist" y="38" />
 		<text name="text_2" style_text_color="0x86fa7e" x="105" text="Raw" y="38" />
-		
-		<button name="bD_1" height="25" x="76" y="59" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" />		
-		
-		<button name="bD_2" height="25" x="75" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" y="90" />		
-			
-		<button name="bD_3" height="25" x="75" y="120" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" />
-		
-		<button name="bD_4" height="25" x="75" y="150" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left"/>
+
+		<button name="bD_1" height="25" x="76" y="59" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
+			<event_cb trigger="clicked" callback="eP1_Dry" />
+		</button>
+
+		<button name="bD_2" height="25" x="75" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" y="90">
+			<event_cb trigger="clicked" callback="eP2_Dry" />
+		</button>
+
+		<button name="bD_3" height="25" x="75" y="120" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
+			<event_cb trigger="clicked" callback="eP3_Dry" />
+		</button>
+
+		<button name="bD_4" height="25" x="75" y="150" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
+			<event_cb trigger="clicked" callback="eP4_Dry" />
+		</button>
 		<event_cb trigger="clicked" callback="eP4_Dry" />
-		
-		<button	name="bW_1"	height="25" x="170" y="60" bg_color="0x06218a"
-		text="" width="38" icon="icon_arrow_right"/>
-		
-		<button name="bW_2" height="25" x="170" y="90" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right" />
-		
-		<button name="bW_3" height="25" x="170" y="120" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right" />		
-		
-		<button
-			name="bW_4"
-			height="25"
-			x="170"
-			y="150"
-			bg_color="0x06218a"
-			text=""
-			width="38"
-			icon="icon_arrow_right"
-		/>
+
+		<button name="bW_1" height="25" x="170" y="60" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
+			<event_cb trigger="clicked" callback="eP1_Wet" />
+		</button>
+
+		<button name="bW_2" height="25" x="170" y="90" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
+			<event_cb trigger="clicked" callback="eP2_Wet" />
+		</button>
+
+		<button name="bW_3" height="25" x="170" y="120" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
+			<event_cb trigger="clicked" callback="eP3_Wet" />
+		</button>
+
+		<button name="bW_4" height="25" x="170" y="150" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
+			<event_cb trigger="clicked" callback="eP4_Wet" />
+		</button>
 	</view>
 </screen>

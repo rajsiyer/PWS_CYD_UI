@@ -1,0 +1,21 @@
+<component>
+	<api>
+		<prop name="subject" type="subject" help="Integer subject edited by this spinner" />
+	</api>
+	<view extends="lv_obj" width="112" height="25" style_bg_opa="0%" style_border_width="1" style_pad_all="0">
+		<lv_button name="button_1" align="center" x="-40" width="32" height="25">
+			<lv_label name="label_1" text="-" align="center" />
+			<subject_increment_event subject="$subject" step="-1" trigger="clicked" />
+			<subject_increment_event subject="$subject" step="-1" trigger="long_pressed_repeat" />
+		</lv_button>
+
+		<lv_spinbox name="spinbox" align="center" width="40" height="25" digit_count="3"
+			min_value="0" max_value="100" step="1" bind_value="$subject" />
+
+		<lv_button name="button_2" align="center" x="40" width="32" height="25">
+			<lv_label name="label_2" text="+" align="center" />
+			<subject_increment_event subject="$subject" step="1" trigger="clicked" />
+			<subject_increment_event subject="$subject" step="1" trigger="long_pressed_repeat" />
+		</lv_button>
+	</view>
+</component>

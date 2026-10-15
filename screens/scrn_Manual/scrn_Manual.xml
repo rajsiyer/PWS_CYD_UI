@@ -1,12 +1,53 @@
 <screen>
-	<view extends="lv_obj">
+	<view extends="lv_obj" style_bg_color="0x323230" style_bg_opa="100%">
 		<!-- Add your code here -->
-		<button name="btn_Man_Home" x="24" y="204" text="Home" text_color="0xfcfcfc" bg_color="0x067003">
+		<button name="btn_Man_Home" x="10" y="205" text="Home" text_color="0xfcfcfc" bg_color="0x067003">
 			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
 		</button>
-		<button name="btn_Man_Setting" x="211" y="198" text="Settings" text_color="0xffffff">
-			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Settings" />
+		<button name="btn_Man_Setting" x="245" y="203" text="Settings" text_color="0xffffff" width="70">
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set1" />
 		</button>
-		<h2 name="h2_1" x="82" y="84" text="Manual" />
+		<text name="text_1" x="75" y="4" style_text_color="0xfff887" text="MANUAL OPERATION" />
+
+		<button name="Strt_P1" bg_color="0x076d02" text="START" width="65" height="26" radius="4" x="50" y="50">
+			<event_cb trigger="clicked" callback="eMan_P1_Start" />
+		</button>
+		<button name="Stop_P1" x="135" bg_color="0xc50d04" text="STOP" width="65" height="26" radius="4" y="50">
+			<event_cb trigger="clicked" callback="eMan_P1_Stop" />
+		</button>
+		<button name="Stop_P2" x="135" bg_color="0xc50d04" text="STOP" width="65" height="26" radius="4" y="155">
+			<event_cb trigger="clicked" callback="eMan_P4_Stop" />
+		</button>
+		<button name="Stop_P4" x="135" bg_color="0xc50d04" text="STOP" width="65" height="26" radius="4" y="120">
+			<event_cb trigger="clicked" callback="eMan_P3_Stop" />
+		</button>
+		<button name="Stop_P3" x="135" bg_color="0xc50d04" text="STOP" width="65" height="26" radius="4" y="85">
+			<event_cb trigger="clicked" callback="eMan_P2_Stop" />
+		</button>
+		<button name="Strt_P4" x="50" y="155" bg_color="0x076d02" text="START" width="65" height="26" radius="4">
+			<event_cb trigger="clicked" callback="eMan_P4_Start" />
+		</button>
+		<button name="Strt_P3" x="50" y="120" bg_color="0x076d02" text="START" width="65" height="26" radius="4">
+			<event_cb trigger="clicked" callback="eMan_P3_Start" />
+		</button>
+		<button name="Strt_P2" x="50" y="85" bg_color="0x076d02" text="START" width="65" height="26" radius="4">
+			<event_cb trigger="clicked" callback="eMan_P2_Start" />
+		</button>
+		<h5 name="P_2" style_text_color="0xfff887" text="P-4" x="13" y="160" />
+		<h5 name="P_4" style_text_color="0xfff887" text="P-3" x="13" y="125" />
+		<h5 name="P_3" style_text_color="0xfff887" text="P-2" x="13" y="90" />
+		<h5 name="P_1" style_text_color="0xfff887" y="55" text="P-1" x="13" />
+
+		<button name="Ind_1" height="25" x="216" y="50" width="50" text="">
+			<bind_style name="style_pump_off" subject="sjt_Pump1" ref_value="0" />
+			<bind_style name="style_pump_on" subject="sjt_Pump1" ref_value="1" />
+			<text name="pump1_text" text="OFF" align="center" />
+		</button>
+
+		<button name="Ind_2" height="25" x="216" y="85" width="50" bg_color="0xb70303" text="OFF" />
+		<button name="Ind_3" height="25" x="216" y="120" width="50" bg_color="0xb70303" text="OFF" />
+		<button name="Ind_4" height="25" x="216" y="155" width="50" bg_color="0xb70303" text="OFF" />
+
+		<text name="Num_Ind1" x="280" y="53" style_text_color="0x86fa7e" bind_text="sjt_Pump1" bind_text-fmt="%d" />
 	</view>
 </screen>
