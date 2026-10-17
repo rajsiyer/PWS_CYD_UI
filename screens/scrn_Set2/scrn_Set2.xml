@@ -62,9 +62,10 @@
 			y="203"
 			radius="5"
 			bg_color="0x186804"
-			text="Home"
+			text=""
 			text_color="0xffffff"
-			icon="icon_chevron_left"
+			icon="icon_home"
+			height="25"
 		>
 			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
 		</button>
@@ -78,6 +79,9 @@
 			icon="icon_chevron_left"
 		>
 			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set1" />
+		</button>
+		<button name="btn_network" radius="5" bg_color="0x464242" text="" icon="icon_wifi" x="70" y="203" height="25">
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_wifiSetup" />
 		</button>
 	</view>
 </screen>

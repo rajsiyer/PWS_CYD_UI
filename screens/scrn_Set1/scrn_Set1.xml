@@ -23,11 +23,11 @@
 			x="10"
 			y="206"
 			bg_color="0x186804"
-			text="Home"
+			text=""
 			text_color="0xffffff"
-			icon="icon_chevron_left"
-			width="88"
-			height="26"
+			icon="icon_home"
+			width="51"
+			height="25"
 			radius="5"
 		>
 			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
@@ -40,14 +40,14 @@
 		<text name="text_7" y="33" width="125" text="Pumping (sec)" x="190" style_text_color="0xfff887" />
 		<button
 			name="btn_Save"
-			x="127"
-			y="180"
+			x="131"
+			y="171"
 			bg_color="0x444241"
 			text="SAVE"
 			text_color="0xffffff"
 			icon="icon_settings"
-			width="88"
-			height="26"
+			width="80"
+			height="24"
 			radius="5"
 		>
 			<event_cb trigger="clicked" callback="eSettings_Save" />
@@ -61,10 +61,13 @@
 			text_color="0xffffff"
 			icon="icon_arrow_right"
 			width="88"
-			height="26"
+			height="25"
 			radius="5"
 		>
 			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set2" />
+		</button>
+		<button name="btn_network" radius="5" bg_color="0x464242" text="" icon="icon_wifi" x="70" y="207" height="25">
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_wifiSetup" />
 		</button>
 	</view>
 </screen>
