@@ -19,6 +19,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/layout/container/container_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/layout/panel/panel_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/layout/row/row_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/legend/legend_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/list/list_item/list_item_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/list/list_section/list_section_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/components/list/list_separator/list_separator_gen.c
@@ -31,11 +32,7 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/components/typography/text/text_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/fonts/font_body_data.c
   ${CMAKE_CURRENT_LIST_DIR}/fonts/font_body_symbols_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_h1_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_h2_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_h3_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_h4_data.c
-  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_h5_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/font_heading_data.c
   ${CMAKE_CURRENT_LIST_DIR}/images/icon_arrow_down_data.c
   ${CMAKE_CURRENT_LIST_DIR}/images/icon_arrow_left_data.c
   ${CMAKE_CURRENT_LIST_DIR}/images/icon_arrow_right_data.c
@@ -85,7 +82,9 @@ list(
   ${CMAKE_CURRENT_LIST_DIR}/lvgl_ui_project_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/lvgl_ui_project.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Calib/scrn_Calib_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_History/scrn_History_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Home/scrn_Home_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Manual/scrn_Manual_gen.c
   ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Set1/scrn_Set1_gen.c
-  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Set2/scrn_Set2_gen.c)
+  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_Set2/scrn_Set2_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/scrn_wifiSetup/scrn_wifiSetup_gen.c)

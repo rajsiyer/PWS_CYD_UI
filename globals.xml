@@ -45,9 +45,7 @@
 	     bump range/symbols if you need more glyphs.
 	     font_body is the inherited default (see style_screen_*). -->
 	<fonts>
-		<!-- FontAwesome glyphs for the LV_SYMBOLs used by lv_keyboard (left,
-		     right, OK, close, backspace, new-line, keyboard) plus up/down.
-		     lv_fallback=font_body so Latin keys still render from one font. -->
+		<!-- FontAwesome symbols required by the LVGL keyboard -->
 		<bin
 			name="font_body_symbols"
 			size="16"
@@ -57,9 +55,10 @@
 			as_file="false"
 		/>
 
+		<!-- General body text -->
 		<bin
 			name="font_body"
-			size="16"
+			size="14"
 			src_path="fonts/Montserrat-Regular.ttf"
 			bpp="4"
 			range="0x20-0x7F"
@@ -67,46 +66,12 @@
 			as_file="false"
 			lv_fallback="font_body_symbols_data"
 		/>
+
+		<!-- Shared heading font -->
 		<bin
-			name="font_h5"
+			name="font_heading"
 			size="18"
-			src_path="fonts/Montserrat-Medium.ttf"
-			bpp="4"
-			range="0x20-0x7F"
-			symbols="°—•"
-			as_file="false"
-		/>
-		<bin
-			name="font_h4"
-			size="22"
 			src_path="fonts/Montserrat-SemiBold.ttf"
-			bpp="4"
-			range="0x20-0x7F"
-			symbols="°—•"
-			as_file="false"
-		/>
-		<bin
-			name="font_h3"
-			size="28"
-			src_path="fonts/Montserrat-SemiBold.ttf"
-			bpp="4"
-			range="0x20-0x7F"
-			symbols="°—•"
-			as_file="false"
-		/>
-		<bin
-			name="font_h2"
-			size="34"
-			src_path="fonts/Montserrat-Bold.ttf"
-			bpp="4"
-			range="0x20-0x7F"
-			symbols="°—•"
-			as_file="false"
-		/>
-		<bin
-			name="font_h1"
-			size="44"
-			src_path="fonts/Montserrat-Bold.ttf"
 			bpp="4"
 			range="0x20-0x7F"
 			symbols="°—•"
@@ -223,6 +188,15 @@
 		<int name="sjt_monIntrvl" value="120" min_value="1" max_value="1440" help="Monitoring Interval in Minutes" />
 		<int name="sjt_scrnTimeOut" value="15" help="Active screen time after touch" />
 		<int name="sjt_minTnkLvl" value="30" min_value="1" max_value="100" help="Minimum water Level in tank" />
+		<int name="sjt_WiFi_dd_index" value="0" min_value="0" max_value="20" />
+		<int name="show_KB" min_value="0" max_value="1" value="0" />
+		<int name="show_confirm" min_value="0" max_value="1" value="0" />
+		<int name="pending_cal_value" value="0" min_value="0" max_value="32767" />
+
+		<string name="Wifi_passwd" value="" help="Password for WiFi AP" />
+		<string name="Wifi_SSID" value="" help="SSID of the Wi-lan network" />
+		<string name="Wifi_status" value="" help="Status the WiFi link" />
+		<string name="sjt_confirm_message" value="" help="Suitable message for confirming change" />
 	</subjects>
 
 	<images>

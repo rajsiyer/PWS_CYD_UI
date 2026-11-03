@@ -36,8 +36,8 @@
 			style_text_color="0x86fa7e"
 			bind_text="subject_moisture1"
 			bind_text-fmt="%d"
-			width="11"
 			height="17"
+			width="30"
 		/>
 
 		<text
@@ -47,6 +47,7 @@
 			bind_text="subject_moisture2"
 			bind_text-fmt="%d"
 			x="278"
+			width="30"
 		/>
 
 		<text
@@ -56,6 +57,7 @@
 			bind_text="subject_moisture3"
 			bind_text-fmt="%d"
 			x="278"
+			width="30"
 		/>
 
 		<text
@@ -65,6 +67,7 @@
 			bind_text="subject_moisture4"
 			bind_text-fmt="%d"
 			x="278"
+			width="30"
 		/>
 		<h5 name="h5_1" text="Sensor Calibration" style_text_color="0xfff887" width="200" height="20" x="70" y="6" />
 
@@ -72,36 +75,72 @@
 		<text name="text_2" style_text_color="0x86fa7e" x="105" text="Raw" y="38" />
 
 		<button name="bD_1" height="25" x="76" y="59" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
-			<event_cb trigger="clicked" callback="eP1_Dry" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="0" />
 		</button>
 
 		<button name="bD_2" height="25" x="75" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left" y="90">
-			<event_cb trigger="clicked" callback="eP2_Dry" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="1" />
 		</button>
 
 		<button name="bD_3" height="25" x="75" y="120" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
-			<event_cb trigger="clicked" callback="eP3_Dry" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="2" />
 		</button>
 
 		<button name="bD_4" height="25" x="75" y="150" bg_color="0x8a4806" text="" width="38" icon="icon_arrow_left">
-			<event_cb trigger="clicked" callback="eP4_Dry" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="3" />
 		</button>
-		<event_cb trigger="clicked" callback="eP4_Dry" />
 
 		<button name="bW_1" height="25" x="170" y="60" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
-			<event_cb trigger="clicked" callback="eP1_Wet" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="4" />
 		</button>
 
 		<button name="bW_2" height="25" x="170" y="90" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
-			<event_cb trigger="clicked" callback="eP2_Wet" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="5" />
 		</button>
 
 		<button name="bW_3" height="25" x="170" y="120" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
-			<event_cb trigger="clicked" callback="eP3_Wet" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="6" />
 		</button>
 
 		<button name="bW_4" height="25" x="170" y="150" bg_color="0x06218a" text="" width="38" icon="icon_arrow_right">
-			<event_cb trigger="clicked" callback="eP4_Wet" />
+			<event_cb trigger="clicked" callback="on_save_request" user_data="7" />
 		</button>
+		<lv_obj
+			name="confirm_overlay"
+			x="0"
+			y="0"
+			width="320"
+			height="240"
+			style_bg_color="0x000000"
+			style_bg_opa="60%"
+			style_border_width="0"
+			style_radius="0"
+		>
+			<bind_flag_if_eq subject="show_confirm" flag="hidden" ref_value="0" />
+
+			<lv_obj
+				name="confirm_box"
+				align="center"
+				width="240"
+				height="110"
+				style_bg_color="0x2c2c2c"
+				style_radius="10"
+				style_pad_all="10"
+			>
+				<text name="confirm_msg" bind_text="sjt_confirm_message" bind_text-fmt="%s" align="top_mid" y="8" />
+
+				<lv_button name="btn_ok" align="bottom_left" x="10" width="90" height="32">
+					<text text="OK" align="center" />
+					<event_cb trigger="clicked" callback="on_confirm_ok" />
+					<subject_set_int_event trigger="clicked" subject="show_confirm" value="0" />
+				</lv_button>
+
+				<lv_button name="btn_cancel" align="bottom_right" x="-10" width="90" height="32">
+					<text name="confirm_cancel_label" text="Cancel" align="center" />
+					<event_cb trigger="clicked" callback="on_confirm_cancel" />
+					<subject_set_int_event trigger="clicked" subject="show_confirm" value="0" />
+				</lv_button>
+			</lv_obj>
+		</lv_obj>
 	</view>
 </screen>

@@ -11,14 +11,15 @@
 		<!-- Add your code here -->
 		<button
 			name="btnMan"
-			x="4"
+			x="8"
 			y="201"
-			radius="10"
+			radius="3"
 			text_color="0xfcfcfc"
 			bg_color="0x8a0e05"
-			text="Manual"
-			height="33"
+			text=""
+			height="30"
 			width="70"
+			icon="icon_user"
 		>
 			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Manual" />
 		</button>
@@ -26,14 +27,15 @@
 		<button
 			name="btnSettings"
 			bg_color="0x383535"
-			text="Settings"
+			text=""
 			style_align="left_mid"
-			radius="10"
-			x="82"
-			y="97"
+			radius="3"
+			x="86"
 			text_color="0xfcfcfc"
-			height="33"
+			height="30"
 			width="70"
+			y="98"
+			icon="icon_settings"
 		>
 			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Set1" />
 		</button>
@@ -43,12 +45,13 @@
 			bg_color="0x084f02"
 			text="Calib"
 			style_align="left_mid"
-			radius="10"
-			x="241"
-			y="97"
+			x="242"
+			y="98"
 			text_color="0xffffff"
 			width="70"
-			height="33"
+			height="30"
+			radius="3"
+			icon=""
 		>
 			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Calib" />
 		</button>
@@ -74,8 +77,8 @@
 
 		<text
 			name="Moist3"
-			x="72"
-			y="105"
+			x="77"
+			y="106"
 			style_text_color="0x86fa7e"
 			bind_text="subject_moisture3"
 			bind_text-fmt="%d"
@@ -89,5 +92,20 @@
 			bind_text="subject_moisture4"
 			bind_text-fmt="%d"
 		/>
+		<button
+			name="btnTrends"
+			bg_color="0x18b06b"
+			text=""
+			style_align="left_mid"
+			radius="3"
+			x="164"
+			y="98"
+			text_color="0xfcfcfc"
+			height="30"
+			width="70"
+			icon="icon_clock"
+		>
+			<screen_create_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_History" />
+		</button>
 	</view>
 </screen>

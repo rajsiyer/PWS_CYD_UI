@@ -8,7 +8,7 @@
 	</api>
 
 	<styles>
-		<style name="style_h2" text_font="font_h2" />
+		<style name="style_h2" text_font="font_heading" />
 	</styles>
 
 	<!-- Heading. Text color inherited; override per-use with style_text_color. -->
