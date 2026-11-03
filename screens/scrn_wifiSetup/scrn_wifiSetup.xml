@@ -1,0 +1,32 @@
+<screen>
+	<view extends="lv_obj" style_bg_color="0x323230" style_bg_opa="100%">
+		<text name="text_2" x="74" y="3" width="171" height="16" style_text_color="0xfff887" text="NETWORK ACCESS" />
+		<subject_set_int_event trigger="clicked" subject="show_KB" value="0" />
+
+		<button name="butnHome" x="5" y="201" bg_color="0x8a0e05" text="" radius="5" icon="icon_home">
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+
+		<dropdown
+			name="wifi_dropdown"
+			height="20"
+			style_radius="3"
+			x="20"
+			y="50"
+			subject="sjt_WiFi_dd_index"
+			options="Scanning.."
+			width="150"
+		/>
+
+		<text_input name="text_input_1" x="20" y="85" height="18" style_radius="3" password="false" width="150">
+			<subject_set_int_event trigger="clicked" subject="show_KB" value="1" />
+		</text_input>
+
+		<text name="txt_ssid" x="200" width="100" style_text_color="0xfff887" bind_text="Wifi_SSID" y="83" />
+
+		<keyboard name="keyboard_1" mode="text_lower" textarea="text_input_1" hidden="true">
+			<bind_flag_if_eq subject="show_KB" flag="hidden" ref_value="0" />
+		</keyboard>
+		<text name="txt_Status" x="200" width="100" style_text_color="0xfff887" bind_text="Wifi_status" y="50" />
+	</view>
+</screen>

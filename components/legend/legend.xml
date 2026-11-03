@@ -1,0 +1,29 @@
+<component>
+	<api>
+		<!-- Add your API here here. For example 
+		<prop name="prop1" type="int" default="0" help="What is this property?"/>
+		-->
+		<prop name="color" type="color" default="0xffffff" />
+		<prop name="label" type="string" default="label" />
+	</api>
+	<view
+		extends="lv_obj"
+		width="58"
+		height="14"
+		scrollable="false"
+		style_bg_opa="0%"
+		style_border_width="0"
+		style_pad_all="0"
+	>
+		<lv_obj
+			width="10"
+			height="10"
+			align="left_mid"
+			style_radius="2"
+			style_bg_color="$color"
+			style_bg_opa="100%"
+			style_border_width="0"
+		/>
+		<text text="$label" style_text_color="0xfff887" align="left_mid" x="14" />
+	</view>
+</component>

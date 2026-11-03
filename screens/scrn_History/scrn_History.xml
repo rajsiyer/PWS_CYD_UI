@@ -1,0 +1,67 @@
+<screen>
+	<view extends="lv_obj" style_bg_color="0x080236" style_bg_opa="100%">
+		<!-- Add your code here -->
+		<lv_chart
+			name="trends"
+			x="40"
+			y="30"
+			width="270"
+			height="180"
+			hor_div_line_count="11"
+			ver_div_line_count="6"
+			point_count="288"
+			update_mode="shift"
+			style_line_width="1"
+			style_line_color="0x191a1a"
+			style_line_width-items="2"
+			style_bg_color="0x000000"
+		>
+			<lv_chart-axis axis="primary_y" />
+			<lv_chart-series color="0x12d304" />
+			<lv_chart-series color="0xf5c358" />
+			<lv_chart-series color="0x150ae6" />
+			<lv_chart-series color="0xe6f10f" />
+			<lv_chart-series color="0xff665e" />
+		</lv_chart>
+
+		<h5 name="Title_1" x="68" y="3" style_text_color="0xfff887" text="MOISTURE HISTORY" width="200" height="20" />
+
+		<lv_scale
+			name="scale_6"
+			width="30"
+			height="180"
+			style_line_color="0xcccccc"
+			style_text_color="0xcccccc"
+			mode="vertical_left"
+			total_tick_count="11"
+			label_show="true"
+			min_value="0"
+			max_value="100"
+			align="right_mid"
+			x="-281"
+			y="1"
+			draw_ticks_on_top="true"
+			major_tick_every="2"
+			post_draw="true"
+		/>
+		<button
+			name="btn_Settings_Home"
+			x="8"
+			y="213"
+			bg_color="0x186804"
+			text=""
+			text_color="0xffffff"
+			icon="icon_home"
+			width="51"
+			height="25"
+			radius="5"
+		>
+			<screen_load_event trigger="clicked" anim_type="none" duration="0" delay="0" screen="scrn_Home" />
+		</button>
+		<legend color="0x12d304" label="P1" x="80" y="215" />
+		<legend color="0xf5c358" label="P2" x="128" y="215" />
+		<legend color="0x150ae6" label="P3" x="174" y="215" />
+		<legend color="0xe6f10f" label="P4" x="217" y="215" />
+		<legend color="0xff665e" label="LEV" x="260" y="215" />
+	</view>
+</screen>
